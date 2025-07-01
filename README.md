@@ -8,6 +8,8 @@ To evaluate online performance using an HPC cluster with Apptainer/Singularity c
 
 The workflow can also be run on a local linux x86_64 system as well. Instructions for using local resources are in [Local setup](#local-setup)
 
+Below we also provide instructions for launching a control E3SM-MMF simulation workflow and an online hybrid simulation workflow using the provided Docker container. We strongly recommend the users to read the [E3SM-MMF documentation](https://github.com/NVlabs/E3SM/tree/main/climsim_scripts) for more details on the MMF model and its configuration. 
+
 ## Local setup
 
 Clone the repo first
