@@ -4,7 +4,7 @@ Many HPC clusters do not support Docker but instead use Singularity (now known a
 
 ## Download the Precompiled .sif Image
 
-We have prepared a precompiled .sif image for the hybrid-ML simulation. You can download it from [this google drive link](https://drive.google.com/file/d/112a25wiEstGA7-ibxd2iqa70hBAVvorV/view?usp=sharing).
+We have prepared a precompiled .sif image for the hybrid-ML simulation. You can download it from [this zenodo link](https://zenodo.org/records/15786767).
 
 ## Running the hybrid-ML simulation
 
