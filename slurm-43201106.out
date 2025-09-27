@@ -1,0 +1,5 @@
+FAILED to create volume "to": /var/udiMount//storage/shared_e3sm, cannot create mount points in that location
+FAILED to setup user-requested mounts.
+FAILED to setup image.
+srun: error: nid002052: task 0: Exited with exit code 1
+srun: Terminating StepId=43201106.0
