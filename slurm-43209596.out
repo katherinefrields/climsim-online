@@ -1,0 +1,326 @@
+Compset longname is 2010_EAM%MMF1_ELM%SP_CICE%PRES_DOCN%DOM_SROF_SGLC_SWAV
+Compset specification file is /global/u2/k/kfrields/climsim-online/E3SM/components/eam//cime_config/config_compsets.xml
+Automatically adding SIAC to compset
+Automatically adding SESP to compset
+Compset forcing is 
+ATM component is cam5 physics:E3SM-MMF, RRTMGPXX, 1-mom micro, prescribed aerosol
+LND component is clm4.5 physics:clm4.5 Satellite phenology:
+ICE component is prescribed cice:
+OCN component is DOCN   prescribed ocean mode
+ROF component is Stub river component
+GLC component is Stub glacier (land ice) component
+WAV component is Stub wave component
+IAC component is Stub iac component
+ESP component is Stub external system processing (ESP) component
+Pes     specification file is /global/u2/k/kfrields/climsim-online/E3SM/components/eam/cime_config/config_pes.xml
+WARNING: User-selected machine 'docker-climsim' does not match probed machine 'pm-cpu'
+setting additional fields from config_pes: {}
+ Compset is: 2010_EAM%MMF1_ELM%SP_CICE%PRES_DOCN%DOM_SROF_SGLC_SWAV_SIAC_SESP 
+ Grid is: a%ne4np4.pg2_l%ne4np4.pg2_oi%ne4np4.pg2_r%null_g%null_w%null_z%null_m%oQU240 
+ Components in compset are: ['eam', 'elm', 'cice', 'docn', 'srof', 'sglc', 'swav', 'siac', 'sesp'] 
+Using project from config_machines.xml: CIME
+No charge_account info available, using value from PROJECT
+e3sm model version found: 9e98075b8b
+Batch_system_type is none
+ Creating Case directory /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf
+copying /global/u2/k/kfrields/climsim-online/E3SM/cime_config/machines/syslog.noop -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Tools/mach_syslog
+copying /global/u2/k/kfrields/climsim-online/E3SM/cime_config/customize/e3sm_compile_wrap.py -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Tools
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/env_case.xml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/LockedFiles
+Successfully cleaned env_mach_specific.xml
+copying /global/u2/k/kfrields/climsim-online/E3SM/cime_config/machines/cmake_macros/Macros.cmake -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf
+copying /global/u2/k/kfrields/climsim-online/E3SM/cime_config/machines/cmake_macros/universal.cmake -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/cmake_macros
+copying /global/u2/k/kfrields/climsim-online/E3SM/cime_config/machines/cmake_macros/gnu.cmake -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/cmake_macros
+copying /global/u2/k/kfrields/climsim-online/E3SM/cime_config/machines/cmake_macros/gnu_docker-climsim.cmake -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/cmake_macros
+copying /global/u2/k/kfrields/climsim-online/E3SM/cime_config/machines/cmake_macros/CMakeLists.txt -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/cmake_macros
+copying /global/u2/k/kfrields/climsim-online/E3SM/cime_config/machines/Depends.gnu.cmake -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf
+Creating batch scripts
+Writing case.run script from input template /global/u2/k/kfrields/climsim-online/E3SM/cime_config/machines/template.case.run
+Creating file .case.run
+Writing case.post_run_io script from input template /global/u2/k/kfrields/climsim-online/E3SM/cime_config/machines/template.post_run_io
+Creating file .case.post_run_io
+Writing case.st_archive script from input template /global/u2/k/kfrields/climsim-online/E3SM/cime_config/machines/template.st_archive
+Creating file case.st_archive
+Creating file .case.run.sh
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/env_mach_pes.xml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/LockedFiles
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/env_batch.xml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/LockedFiles
+Creating user_nl_xxx files for components and cpl
+copying /global/u2/k/kfrields/climsim-online/E3SM/driver-mct/cime_config/user_nl_cpl -> .
+copying /global/u2/k/kfrields/climsim-online/E3SM/components/elm/cime_config/user_nl_elm -> 
+copying /global/u2/k/kfrields/climsim-online/E3SM/components/cice/cime_config/user_nl_cice -> 
+copying /global/u2/k/kfrields/climsim-online/E3SM/components/data_comps/docn/cime_config/user_nl_docn -> 
+If an old case build already exists, might want to run 'case.build --clean' before building
+Generating component namelists as part of setup
+  2025-09-27 23:47:49 atm 
+Create namelist for component eam
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/eam//cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/eamconf/atm_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/eamconf/drv_flds_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+  2025-09-27 23:47:50 lnd 
+Create namelist for component elm
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/elm/cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/elmconf/lnd_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+  2025-09-27 23:47:51 ice 
+Create namelist for component cice
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/cice/cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/ciceconf/ice_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+  2025-09-27 23:47:51 ocn 
+Create namelist for component docn
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/data_comps/docn/cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/docnconf/docn_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/docnconf/docn.streams.txt.prescribed -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+  2025-09-27 23:47:52 rof 
+Create namelist for component srof
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/srof/cime_config/buildnml
+  2025-09-27 23:47:52 glc 
+Create namelist for component sglc
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/sglc/cime_config/buildnml
+  2025-09-27 23:47:52 wav 
+Create namelist for component swav
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/swav/cime_config/buildnml
+  2025-09-27 23:47:52 iac 
+Create namelist for component siac
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/siac/cime_config/buildnml
+  2025-09-27 23:47:52 esp 
+Create namelist for component sesp
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/sesp/cime_config/buildnml
+  2025-09-27 23:47:52 cpl 
+Create namelist for component drv
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/driver-mct/cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/drv_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs/drv_flds_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/seq_maps.rc -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/cpl_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/atm_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/iac_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/rof_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/ocn_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/esp_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/lnd_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/glc_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/wav_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/ice_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/cpl_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/atm_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/iac_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/rof_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/ocn_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/esp_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/lnd_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/glc_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/wav_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/ice_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/drv_flds_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/drv_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/atm_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/docn_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/lnd_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/ice_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/docn.streams.txt.prescribed -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/seq_maps.rc -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+You can now run './preview_run' to get more info on how your case will be run
+Building case in directory /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf
+sharedlib_only is False
+model_only is False
+Generating component namelists as part of build
+  2025-09-27 23:47:53 atm 
+Create namelist for component eam
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/eam//cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/eamconf/atm_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/eamconf/drv_flds_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+  2025-09-27 23:47:54 lnd 
+Create namelist for component elm
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/elm/cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/elmconf/lnd_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+  2025-09-27 23:47:54 ice 
+Create namelist for component cice
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/cice/cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/ciceconf/ice_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+  2025-09-27 23:47:55 ocn 
+Create namelist for component docn
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/data_comps/docn/cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/docnconf/docn_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/docnconf/docn.streams.txt.prescribed -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+  2025-09-27 23:47:55 rof 
+Create namelist for component srof
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/srof/cime_config/buildnml
+  2025-09-27 23:47:55 glc 
+Create namelist for component sglc
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/sglc/cime_config/buildnml
+  2025-09-27 23:47:55 wav 
+Create namelist for component swav
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/swav/cime_config/buildnml
+  2025-09-27 23:47:55 iac 
+Create namelist for component siac
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/siac/cime_config/buildnml
+  2025-09-27 23:47:55 esp 
+Create namelist for component sesp
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/sesp/cime_config/buildnml
+  2025-09-27 23:47:55 cpl 
+Create namelist for component drv
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/driver-mct/cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/drv_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs/drv_flds_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/seq_maps.rc -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/cpl_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/atm_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/iac_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/rof_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/ocn_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/esp_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/lnd_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/glc_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/wav_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/ice_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/cpl_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/atm_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/iac_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/rof_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/ocn_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/esp_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/lnd_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/glc_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/wav_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/ice_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/drv_flds_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/drv_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/atm_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/docn_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/lnd_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/ice_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/docn.streams.txt.prescribed -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/seq_maps.rc -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/cmake_macros/CMakeLists.txt -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/cmaketmp
+Building gptl with output to file /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/build/gptl.bldlog.250927-234753
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/share/build/buildlib.gptl
+Component gptl build complete with 1 warnings
+Building mct with output to file /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/build/mct.bldlog.250927-234753
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/share/build/buildlib.mct
+Component mct build complete with 42 warnings
+Building spio with output to file /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/build/spio.bldlog.250927-234753
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/share/build/buildlib.spio
+ERROR: /global/u2/k/kfrields/climsim-online/E3SM/share/build/buildlib.spio FAILED, cat /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/build/spio.bldlog.250927-234753
+ERROR: Unknown Job Queue specified use --force to set
+setting case file to env_run.xml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/env_batch.xml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/LockedFiles
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/env_batch.xml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/LockedFiles
+  2025-09-27 23:48:35 atm 
+Create namelist for component eam
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/eam//cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/eamconf/atm_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/eamconf/drv_flds_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+  2025-09-27 23:48:35 lnd 
+Create namelist for component elm
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/elm/cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/elmconf/lnd_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+  2025-09-27 23:48:36 ice 
+Create namelist for component cice
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/cice/cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/ciceconf/ice_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+  2025-09-27 23:48:36 ocn 
+Create namelist for component docn
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/data_comps/docn/cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/docnconf/docn_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/docnconf/docn.streams.txt.prescribed -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+  2025-09-27 23:48:36 rof 
+Create namelist for component srof
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/srof/cime_config/buildnml
+  2025-09-27 23:48:36 glc 
+Create namelist for component sglc
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/sglc/cime_config/buildnml
+  2025-09-27 23:48:36 wav 
+Create namelist for component swav
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/swav/cime_config/buildnml
+  2025-09-27 23:48:36 iac 
+Create namelist for component siac
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/siac/cime_config/buildnml
+  2025-09-27 23:48:36 esp 
+Create namelist for component sesp
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/components/stub_comps/sesp/cime_config/buildnml
+  2025-09-27 23:48:36 cpl 
+Create namelist for component drv
+   Calling /global/u2/k/kfrields/climsim-online/E3SM/driver-mct/cime_config/buildnml
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/drv_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs/drv_flds_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/seq_maps.rc -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/cpl_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/atm_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/iac_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/rof_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/ocn_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/esp_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/lnd_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/glc_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/wav_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/Buildconf/cplconf/ice_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/cpl_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/atm_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/iac_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/rof_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/ocn_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/esp_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/lnd_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/glc_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/wav_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/ice_modelio.nml -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/drv_flds_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/drv_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/atm_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/docn_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/lnd_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/ice_in -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/docn.streams.txt.prescribed -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+copying /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run/seq_maps.rc -> /pscratch/sd/k/kfrields/climsim-online-data/scratch/example_job_submit_mmf/CaseDocs
+Checking that inputdata is available as part of case submission
+Loading input file list: 'Buildconf/eam.input_data_list'
+Loading input file list: 'Buildconf/cpl.input_data_list'
+Loading input file list: 'Buildconf/cice.input_data_list'
+Loading input file list: 'Buildconf/docn.input_data_list'
+Loading input file list: 'Buildconf/elm.input_data_list'
+Model elm no file specified for finidat
+ERROR: Build complete is not True please rebuild the model by calling case.build
+
+  case : example_job_submit_mmf
+
+
+[32m/global/homes/k/kfrields/climsim-online/E3SM//cime/scripts/create_newcase -case example_job_submit_mmf --script-root /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf -compset F2010-MMF1 -res ne4pg2_ne4pg2   -mach docker-climsim -compiler gnu    -pecount 64x1 [0m
+
+[32m./xmlchange EXEROOT=/pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/build[0m
+
+[32m./xmlchange RUNDIR=/pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/run[0m
+
+[32m./xmlchange DOUT_S_ROOT=/pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf/archive[0m
+
+[32m./xmlchange DOUT_S=FALSE[0m
+
+[32m./xmlchange REST_OPTION=ndays[0m
+
+[32m./xmlchange REST_N=30[0m
+
+[32m./xmlchange MAX_MPITASKS_PER_NODE=64 [0m
+
+[32m./xmlchange MAX_TASKS_PER_NODE=64 [0m
+
+[32m./xmlchange ATM_NCPL=72[0m
+
+[32m./xmlchange --append --id CAM_CONFIG_OPTS --val " -cppdefs '    '  "[0m
+
+[32m./xmlchange PIO_NETCDF_FORMAT="64bit_data" [0m
+
+[32m./case.setup --reset[0m
+
+[32m./case.build[0m
+
+[32m./xmlchange JOB_QUEUE=regular[0m
+
+[32m./xmlchange STOP_OPTION=nmonths,STOP_N=3,RESUBMIT=0[0m
+
+[32m./xmlchange JOB_WALLCLOCK_TIME=24:00:00[0m
+
+[32m./xmlchange CHARGE_ACCOUNT=m4331,PROJECT=m4331[0m
+
+[32m./xmlchange --file env_run.xml CONTINUE_RUN=False [0m
+
+[32m./case.submit[0m
+
+  case : example_job_submit_mmf
+

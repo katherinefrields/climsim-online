@@ -1,0 +1,9 @@
+
+  case : example_job_submit_mmf
+
+
+[31mThis case already exists: 
+/pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf[0m
+
+srun: error: nid003396: task 0: Exited with exit code 1
+srun: Terminating StepId=43208295.0

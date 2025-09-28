@@ -1,0 +1,5 @@
+Mount request path /var/udiMount/pscratch/sd/k/kfrields/climsim-online-data/inputdata not on an approved device for volume mounts.
+FAILED to setup user-requested mounts.
+FAILED to setup image.
+srun: error: nid001876: task 0: Exited with exit code 1
+srun: Terminating StepId=43202634.0

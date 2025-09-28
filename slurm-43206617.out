@@ -1,0 +1,521 @@
+Compset longname is 2010_EAM%MMF1_ELM%SP_CICE%PRES_DOCN%DOM_SROF_SGLC_SWAV
+Compset specification file is /climsim/E3SM/components/eam//cime_config/config_compsets.xml
+Automatically adding SIAC to compset
+Automatically adding SESP to compset
+Compset forcing is 
+ATM component is cam5 physics:E3SM-MMF, RRTMGPXX, 1-mom micro, prescribed aerosol
+LND component is clm4.5 physics:clm4.5 Satellite phenology:
+ICE component is prescribed cice:
+OCN component is DOCN   prescribed ocean mode
+ROF component is Stub river component
+GLC component is Stub glacier (land ice) component
+WAV component is Stub wave component
+IAC component is Stub iac component
+ESP component is Stub external system processing (ESP) component
+Pes     specification file is /climsim/E3SM/components/eam/cime_config/config_pes.xml
+WARNING: User-selected machine 'docker-climsim' does not match probed machine 'pm-cpu'
+setting additional fields from config_pes: {}
+ Compset is: 2010_EAM%MMF1_ELM%SP_CICE%PRES_DOCN%DOM_SROF_SGLC_SWAV_SIAC_SESP 
+ Grid is: a%ne4np4.pg2_l%ne4np4.pg2_oi%ne4np4.pg2_r%null_g%null_w%null_z%null_m%oQU240 
+ Components in compset are: ['eam', 'elm', 'cice', 'docn', 'srof', 'sglc', 'swav', 'siac', 'sesp'] 
+Using project from config_machines.xml: CIME
+No charge_account info available, using value from PROJECT
+WARNING: No e3sm Model version found.
+Batch_system_type is none
+ Creating Case directory /scratch/example_job_submit_mmf
+copying /climsim/E3SM/cime_config/machines/syslog.noop -> /scratch/example_job_submit_mmf/Tools/mach_syslog
+copying /climsim/E3SM/cime_config/customize/e3sm_compile_wrap.py -> /scratch/example_job_submit_mmf/Tools
+copying /scratch/example_job_submit_mmf/env_case.xml -> /scratch/example_job_submit_mmf/LockedFiles
+Successfully cleaned env_mach_specific.xml
+copying /climsim/E3SM/cime_config/machines/cmake_macros/Macros.cmake -> /scratch/example_job_submit_mmf
+copying /climsim/E3SM/cime_config/machines/cmake_macros/universal.cmake -> /scratch/example_job_submit_mmf/cmake_macros
+copying /climsim/E3SM/cime_config/machines/cmake_macros/gnu.cmake -> /scratch/example_job_submit_mmf/cmake_macros
+copying /climsim/E3SM/cime_config/machines/cmake_macros/gnu_docker-climsim.cmake -> /scratch/example_job_submit_mmf/cmake_macros
+copying /climsim/E3SM/cime_config/machines/cmake_macros/CMakeLists.txt -> /scratch/example_job_submit_mmf/cmake_macros
+copying /climsim/E3SM/cime_config/machines/Depends.gnu.cmake -> /scratch/example_job_submit_mmf
+Creating batch scripts
+Writing case.run script from input template /climsim/E3SM/cime_config/machines/template.case.run
+Creating file .case.run
+Writing case.post_run_io script from input template /climsim/E3SM/cime_config/machines/template.post_run_io
+Creating file .case.post_run_io
+Writing case.st_archive script from input template /climsim/E3SM/cime_config/machines/template.st_archive
+Creating file case.st_archive
+Creating file .case.run.sh
+copying /scratch/example_job_submit_mmf/env_mach_pes.xml -> /scratch/example_job_submit_mmf/LockedFiles
+copying /scratch/example_job_submit_mmf/env_batch.xml -> /scratch/example_job_submit_mmf/LockedFiles
+Creating user_nl_xxx files for components and cpl
+copying /climsim/E3SM/driver-mct/cime_config/user_nl_cpl -> .
+copying /climsim/E3SM/components/elm/cime_config/user_nl_elm -> 
+copying /climsim/E3SM/components/cice/cime_config/user_nl_cice -> 
+copying /climsim/E3SM/components/data_comps/docn/cime_config/user_nl_docn -> 
+If an old case build already exists, might want to run 'case.build --clean' before building
+Generating component namelists as part of setup
+  2025-09-27 22:30:51 atm 
+Create namelist for component eam
+   Calling /climsim/E3SM/components/eam//cime_config/buildnml
+copying /scratch/example_job_submit_mmf/Buildconf/eamconf/atm_in -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/eamconf/drv_flds_in -> /scratch//example_job_submit_mmf/run
+copying /climsim/E3SM/components/eamxx/data/SCREAM_YAML_README -> /storage/inputdata/atm/cam/physprops
+copying /climsim/E3SM/components/eamxx/data/cf-scream-name-table.yaml -> /storage/inputdata/atm/cam/physprops
+copying /climsim/E3SM/components/eamxx/data/cf-standard-name-table.yaml -> /storage/inputdata/atm/cam/physprops
+copying /climsim/E3SM/components/eamxx/data/scream_default_output.yaml -> /storage/inputdata/atm/cam/physprops
+copying /climsim/E3SM/components/eamxx/data/scream_default_remap.yaml -> /storage/inputdata/atm/cam/physprops
+  2025-09-27 22:30:51 lnd 
+Create namelist for component elm
+   Calling /climsim/E3SM/components/elm/cime_config/buildnml
+copying /scratch/example_job_submit_mmf/Buildconf/elmconf/lnd_in -> /scratch//example_job_submit_mmf/run
+  2025-09-27 22:30:51 ice 
+Create namelist for component cice
+   Calling /climsim/E3SM/components/cice/cime_config/buildnml
+copying /scratch/example_job_submit_mmf/Buildconf/ciceconf/ice_in -> /scratch//example_job_submit_mmf/run
+  2025-09-27 22:30:52 ocn 
+Create namelist for component docn
+   Calling /climsim/E3SM/components/data_comps/docn/cime_config/buildnml
+File not found: domainfile = /storage/inputdata/share/domains/domain.ocn.ne4pg2_oQU240.190321.nc, will attempt to download in check_input_data phase
+copying /scratch/example_job_submit_mmf/Buildconf/docnconf/docn_in -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/docnconf/docn.streams.txt.prescribed -> /scratch//example_job_submit_mmf/run
+  2025-09-27 22:30:52 rof 
+Create namelist for component srof
+   Calling /climsim/E3SM/components/stub_comps/srof/cime_config/buildnml
+  2025-09-27 22:30:52 glc 
+Create namelist for component sglc
+   Calling /climsim/E3SM/components/stub_comps/sglc/cime_config/buildnml
+  2025-09-27 22:30:52 wav 
+Create namelist for component swav
+   Calling /climsim/E3SM/components/stub_comps/swav/cime_config/buildnml
+  2025-09-27 22:30:52 iac 
+Create namelist for component siac
+   Calling /climsim/E3SM/components/stub_comps/siac/cime_config/buildnml
+  2025-09-27 22:30:52 esp 
+Create namelist for component sesp
+   Calling /climsim/E3SM/components/stub_comps/sesp/cime_config/buildnml
+  2025-09-27 22:30:52 cpl 
+Create namelist for component drv
+   Calling /climsim/E3SM/driver-mct/cime_config/buildnml
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/drv_in -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/CaseDocs/drv_flds_in -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/seq_maps.rc -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/cpl_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/atm_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/iac_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/rof_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/ocn_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/esp_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/lnd_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/glc_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/wav_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/ice_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch//example_job_submit_mmf/run/cpl_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/atm_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/iac_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/rof_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/ocn_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/esp_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/lnd_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/glc_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/wav_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/ice_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/drv_flds_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/drv_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/atm_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/docn_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/lnd_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/ice_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/docn.streams.txt.prescribed -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/seq_maps.rc -> /scratch/example_job_submit_mmf/CaseDocs
+You can now run './preview_run' to get more info on how your case will be run
+Building case in directory /scratch/example_job_submit_mmf
+sharedlib_only is False
+model_only is False
+Generating component namelists as part of build
+  2025-09-27 22:30:53 atm 
+Create namelist for component eam
+   Calling /climsim/E3SM/components/eam//cime_config/buildnml
+copying /scratch/example_job_submit_mmf/Buildconf/eamconf/atm_in -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/eamconf/drv_flds_in -> /scratch//example_job_submit_mmf/run
+  2025-09-27 22:30:53 lnd 
+Create namelist for component elm
+   Calling /climsim/E3SM/components/elm/cime_config/buildnml
+copying /scratch/example_job_submit_mmf/Buildconf/elmconf/lnd_in -> /scratch//example_job_submit_mmf/run
+  2025-09-27 22:30:53 ice 
+Create namelist for component cice
+   Calling /climsim/E3SM/components/cice/cime_config/buildnml
+copying /scratch/example_job_submit_mmf/Buildconf/ciceconf/ice_in -> /scratch//example_job_submit_mmf/run
+  2025-09-27 22:30:53 ocn 
+Create namelist for component docn
+   Calling /climsim/E3SM/components/data_comps/docn/cime_config/buildnml
+File not found: domainfile = /storage/inputdata/share/domains/domain.ocn.ne4pg2_oQU240.190321.nc, will attempt to download in check_input_data phase
+copying /scratch/example_job_submit_mmf/Buildconf/docnconf/docn_in -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/docnconf/docn.streams.txt.prescribed -> /scratch//example_job_submit_mmf/run
+  2025-09-27 22:30:53 rof 
+Create namelist for component srof
+   Calling /climsim/E3SM/components/stub_comps/srof/cime_config/buildnml
+  2025-09-27 22:30:53 glc 
+Create namelist for component sglc
+   Calling /climsim/E3SM/components/stub_comps/sglc/cime_config/buildnml
+  2025-09-27 22:30:53 wav 
+Create namelist for component swav
+   Calling /climsim/E3SM/components/stub_comps/swav/cime_config/buildnml
+  2025-09-27 22:30:53 iac 
+Create namelist for component siac
+   Calling /climsim/E3SM/components/stub_comps/siac/cime_config/buildnml
+  2025-09-27 22:30:53 esp 
+Create namelist for component sesp
+   Calling /climsim/E3SM/components/stub_comps/sesp/cime_config/buildnml
+  2025-09-27 22:30:53 cpl 
+Create namelist for component drv
+   Calling /climsim/E3SM/driver-mct/cime_config/buildnml
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/drv_in -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/CaseDocs/drv_flds_in -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/seq_maps.rc -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/cpl_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/atm_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/iac_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/rof_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/ocn_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/esp_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/lnd_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/glc_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/wav_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/ice_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch//example_job_submit_mmf/run/cpl_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/atm_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/iac_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/rof_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/ocn_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/esp_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/lnd_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/glc_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/wav_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/ice_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/drv_flds_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/drv_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/atm_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/docn_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/lnd_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/ice_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/docn.streams.txt.prescribed -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/seq_maps.rc -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch/example_job_submit_mmf/cmake_macros/CMakeLists.txt -> /scratch/example_job_submit_mmf/cmaketmp
+Building gptl with output to file /scratch/example_job_submit_mmf/build/gptl.bldlog.250927-223052
+   Calling /climsim/E3SM/share/build/buildlib.gptl
+Component gptl build complete with 1 warnings
+Building mct with output to file /scratch/example_job_submit_mmf/build/mct.bldlog.250927-223052
+   Calling /climsim/E3SM/share/build/buildlib.mct
+Component mct build complete with 42 warnings
+Building spio with output to file /scratch/example_job_submit_mmf/build/spio.bldlog.250927-223052
+   Calling /climsim/E3SM/share/build/buildlib.spio
+ERROR: /climsim/E3SM/share/build/buildlib.spio FAILED, cat /scratch/example_job_submit_mmf/build/spio.bldlog.250927-223052
+ERROR: Unknown Job Queue specified use --force to set
+setting case file to env_run.xml
+copying /scratch/example_job_submit_mmf/env_batch.xml -> /scratch/example_job_submit_mmf/LockedFiles
+copying /scratch/example_job_submit_mmf/env_batch.xml -> /scratch/example_job_submit_mmf/LockedFiles
+  2025-09-27 22:31:27 atm 
+Create namelist for component eam
+   Calling /climsim/E3SM/components/eam//cime_config/buildnml
+copying /scratch/example_job_submit_mmf/Buildconf/eamconf/atm_in -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/eamconf/drv_flds_in -> /scratch//example_job_submit_mmf/run
+  2025-09-27 22:31:27 lnd 
+Create namelist for component elm
+   Calling /climsim/E3SM/components/elm/cime_config/buildnml
+copying /scratch/example_job_submit_mmf/Buildconf/elmconf/lnd_in -> /scratch//example_job_submit_mmf/run
+  2025-09-27 22:31:28 ice 
+Create namelist for component cice
+   Calling /climsim/E3SM/components/cice/cime_config/buildnml
+copying /scratch/example_job_submit_mmf/Buildconf/ciceconf/ice_in -> /scratch//example_job_submit_mmf/run
+  2025-09-27 22:31:28 ocn 
+Create namelist for component docn
+   Calling /climsim/E3SM/components/data_comps/docn/cime_config/buildnml
+File not found: domainfile = /storage/inputdata/share/domains/domain.ocn.ne4pg2_oQU240.190321.nc, will attempt to download in check_input_data phase
+copying /scratch/example_job_submit_mmf/Buildconf/docnconf/docn_in -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/docnconf/docn.streams.txt.prescribed -> /scratch//example_job_submit_mmf/run
+  2025-09-27 22:31:28 rof 
+Create namelist for component srof
+   Calling /climsim/E3SM/components/stub_comps/srof/cime_config/buildnml
+  2025-09-27 22:31:28 glc 
+Create namelist for component sglc
+   Calling /climsim/E3SM/components/stub_comps/sglc/cime_config/buildnml
+  2025-09-27 22:31:28 wav 
+Create namelist for component swav
+   Calling /climsim/E3SM/components/stub_comps/swav/cime_config/buildnml
+  2025-09-27 22:31:28 iac 
+Create namelist for component siac
+   Calling /climsim/E3SM/components/stub_comps/siac/cime_config/buildnml
+  2025-09-27 22:31:28 esp 
+Create namelist for component sesp
+   Calling /climsim/E3SM/components/stub_comps/sesp/cime_config/buildnml
+  2025-09-27 22:31:28 cpl 
+Create namelist for component drv
+   Calling /climsim/E3SM/driver-mct/cime_config/buildnml
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/drv_in -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/CaseDocs/drv_flds_in -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/seq_maps.rc -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/cpl_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/atm_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/iac_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/rof_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/ocn_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/esp_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/lnd_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/glc_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/wav_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch/example_job_submit_mmf/Buildconf/cplconf/ice_modelio.nml -> /scratch//example_job_submit_mmf/run
+copying /scratch//example_job_submit_mmf/run/cpl_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/atm_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/iac_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/rof_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/ocn_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/esp_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/lnd_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/glc_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/wav_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/ice_modelio.nml -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/drv_flds_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/drv_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/atm_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/docn_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/lnd_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/ice_in -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/docn.streams.txt.prescribed -> /scratch/example_job_submit_mmf/CaseDocs
+copying /scratch//example_job_submit_mmf/run/seq_maps.rc -> /scratch/example_job_submit_mmf/CaseDocs
+Checking that inputdata is available as part of case submission
+Loading input file list: 'Buildconf/eam.input_data_list'
+Model eam missing file aerodep_flx_file = '/storage/inputdata/atm/cam/chem/trop_mam/aero/mam3_1.9x2.5_L30_2000clim_c130319.nc'
+Model eam missing file iceopticsfile = '/storage/inputdata/atm/cam/physprops/iceoptics_c080917.nc'
+Model eam missing file liqopticsfile = '/storage/inputdata/atm/cam/physprops/F_nwvl200_mu20_lam50_res64_t298_c080428.nc'
+Model eam missing file water_refindex_file = '/storage/inputdata/atm/cam/physprops/water_refindex_rrtmg_c080910.nc'
+Model eam missing file solar_data_file = '/storage/inputdata/atm/cam/solar/Solar_2010control_input4MIPS_c20181017.nc'
+Model eam missing file tropopause_climo_file = '/storage/inputdata/atm/cam/chem/trop_mozart/ub/clim_p_trop.nc'
+Model eam missing file prescribed_aero_file = '/storage/inputdata/atm/cam/chem/trop_mam/aero/mam4_0.9x1.2_L72_2000clim_c170323.nc'
+Model eam missing file bnd_topo = '/storage/inputdata/atm/cam/topo/USGS-gtopo30_ne4np4pg2_16x_converted.c20200527.nc'
+Model eam missing file ncdata = '/storage/inputdata/atm/cam/inic/homme/eam_i_mam3_Linoz_ne4np4_L60_c20210917.nc'
+Model eam missing file rrtmgp_coefficients_file_lw = '/storage/inputdata/atm/cam/rad/rrtmgp-data-lw-g128-210809.nc'
+Model eam missing file rrtmgp_coefficients_file_sw = '/storage/inputdata/atm/cam/rad/rrtmgp-data-sw-g112-210809.nc'
+Model eam missing file gw_drag_file = '/storage/inputdata/atm/waccm/gw/newmfspectra40_dc25.nc'
+Model eam missing file prescribed_volcaero_file = '/storage/inputdata/atm/cam/volc/CMIP_DOE-ACME_radiation_average_1850-2014_v3_c20171204.nc'
+Model eam missing file prescribed_ozone_file = '/storage/inputdata/atm/cam/ozone/ozone_1.9x2.5_L26_2000clim_c091112.nc'
+Model eam missing file mode_defs for so4_a1 = '/storage/inputdata/atm/cam/physprops/sulfate_rrtmg_c080918.nc'
+Model eam missing file mode_defs for pom_a1 = '/storage/inputdata/atm/cam/physprops/ocpho_rrtmg_c101112.nc'
+Model eam missing file mode_defs for soa_a1 = '/storage/inputdata/atm/cam/physprops/ocphi_rrtmg_c100508.nc'
+Model eam missing file mode_defs for bc_a1 = '/storage/inputdata/atm/cam/physprops/bcpho_rrtmg_c100508.nc'
+Model eam missing file mode_defs for dst_a1 = '/storage/inputdata/atm/cam/physprops/dust_aeronet_rrtmg_c141106.nc'
+Model eam missing file mode_defs for ncl_a1 = '/storage/inputdata/atm/cam/physprops/ssam_rrtmg_c100508.nc'
+Model eam missing file mode_defs for so4_a2 = '/storage/inputdata/atm/cam/physprops/sulfate_rrtmg_c080918.nc'
+Model eam missing file mode_defs for soa_a2 = '/storage/inputdata/atm/cam/physprops/ocphi_rrtmg_c100508.nc'
+Model eam missing file mode_defs for ncl_a2 = '/storage/inputdata/atm/cam/physprops/ssam_rrtmg_c100508.nc'
+Model eam missing file mode_defs for dst_a3 = '/storage/inputdata/atm/cam/physprops/dust_aeronet_rrtmg_c141106.nc'
+Model eam missing file mode_defs for ncl_a3 = '/storage/inputdata/atm/cam/physprops/ssam_rrtmg_c100508.nc'
+Model eam missing file mode_defs for so4_a3 = '/storage/inputdata/atm/cam/physprops/sulfate_rrtmg_c080918.nc'
+Model eam missing file rad_climate for mam3_mode1 = '/storage/inputdata/atm/cam/physprops/mam3_mode1_rrtmg_c110318.nc'
+Model eam missing file rad_climate for mam3_mode2 = '/storage/inputdata/atm/cam/physprops/mam3_mode2_rrtmg_c110318.nc'
+Model eam missing file rad_climate for mam3_mode3 = '/storage/inputdata/atm/cam/physprops/mam3_mode3_rrtmg_c110318.nc'
+Loading input file list: 'Buildconf/cpl.input_data_list'
+Loading input file list: 'Buildconf/cice.input_data_list'
+Model cice missing file stream_domfilename = '/storage/inputdata/ocn/docn7/domain.ocn.1x1.111007.nc'
+Model cice missing file stream_fldfilename = '/storage/inputdata/ocn/docn7/SSTDATA/sst_ice_CMIP6_DECK_E3SM_1x1_2010_clim_c20190821.nc'
+Model cice missing file kmt_file = '/storage/inputdata/share/domains/domain.ocn.ne4pg2_oQU240.190321.nc'
+Model cice missing file grid_file = '/storage/inputdata/share/domains/domain.ocn.ne4pg2_oQU240.190321.nc'
+Model cice missing file fsnowoptics = '/storage/inputdata/lnd/clm2/snicardata/snicar_optics_5bnd_mam_c160322.nc'
+Loading input file list: 'Buildconf/docn.input_data_list'
+Model docn missing file domain1 = '/storage/inputdata/ocn/docn7/domain.ocn.1x1.111007.nc'
+Model docn missing file file1 = '/storage/inputdata/ocn/docn7/SSTDATA/sst_ice_CMIP6_DECK_E3SM_1x1_2010_clim_c20190821.nc'
+Model docn missing file domainfile = '/storage/inputdata/share/domains/domain.ocn.ne4pg2_oQU240.190321.nc'
+Loading input file list: 'Buildconf/elm.input_data_list'
+Model elm no file specified for finidat
+Model elm missing file stream_fldfilename_lai = '/storage/inputdata/lnd/clm2/lai_streams/MODISPFTLAI_0.5x0.5_c140711.nc'
+Model elm missing file fatmlndfrc = '/storage/inputdata/share/domains/domain.lnd.ne4pg2_oQU240.190321.nc'
+Model elm missing file fsnowaging = '/storage/inputdata/lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc'
+Model elm missing file fsurdat = '/storage/inputdata/lnd/clm2/surfdata_map/surfdata_ne4pg2_simyr2000_c190620_with_TOP.nc'
+Model elm missing file fsoilordercon = '/storage/inputdata/lnd/clm2/paramdata/CNP_parameters_c131108.nc'
+Model elm missing file fsnowoptics = '/storage/inputdata/lnd/clm2/snicardata/snicar_optics_5bnd_mam_c160322.nc'
+Model elm missing file paramfile = '/storage/inputdata/lnd/clm2/paramdata/clm_params_c180301.nc'
+Using protocol wget with user  and passwd 
+Using protocol svn with user  and passwd 
+Client protocol None not enabled
+Checking server https://web.lcrc.anl.gov/public/e3sm/inputdata/ with protocol wget
+Using protocol wget with user  and passwd 
+Loading input file list: 'Buildconf/eam.input_data_list'
+Model eam missing file aerodep_flx_file = '/storage/inputdata/atm/cam/chem/trop_mam/aero/mam3_1.9x2.5_L30_2000clim_c130319.nc'
+Trying to download file: 'atm/cam/chem/trop_mam/aero/mam3_1.9x2.5_L30_2000clim_c130319.nc' to path '/storage/inputdata/atm/cam/chem/trop_mam/aero/mam3_1.9x2.5_L30_2000clim_c130319.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file iceopticsfile = '/storage/inputdata/atm/cam/physprops/iceoptics_c080917.nc'
+Trying to download file: 'atm/cam/physprops/iceoptics_c080917.nc' to path '/storage/inputdata/atm/cam/physprops/iceoptics_c080917.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file liqopticsfile = '/storage/inputdata/atm/cam/physprops/F_nwvl200_mu20_lam50_res64_t298_c080428.nc'
+Trying to download file: 'atm/cam/physprops/F_nwvl200_mu20_lam50_res64_t298_c080428.nc' to path '/storage/inputdata/atm/cam/physprops/F_nwvl200_mu20_lam50_res64_t298_c080428.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file water_refindex_file = '/storage/inputdata/atm/cam/physprops/water_refindex_rrtmg_c080910.nc'
+Trying to download file: 'atm/cam/physprops/water_refindex_rrtmg_c080910.nc' to path '/storage/inputdata/atm/cam/physprops/water_refindex_rrtmg_c080910.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file solar_data_file = '/storage/inputdata/atm/cam/solar/Solar_2010control_input4MIPS_c20181017.nc'
+Trying to download file: 'atm/cam/solar/Solar_2010control_input4MIPS_c20181017.nc' to path '/storage/inputdata/atm/cam/solar/Solar_2010control_input4MIPS_c20181017.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file tropopause_climo_file = '/storage/inputdata/atm/cam/chem/trop_mozart/ub/clim_p_trop.nc'
+Trying to download file: 'atm/cam/chem/trop_mozart/ub/clim_p_trop.nc' to path '/storage/inputdata/atm/cam/chem/trop_mozart/ub/clim_p_trop.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file prescribed_aero_file = '/storage/inputdata/atm/cam/chem/trop_mam/aero/mam4_0.9x1.2_L72_2000clim_c170323.nc'
+Trying to download file: 'atm/cam/chem/trop_mam/aero/mam4_0.9x1.2_L72_2000clim_c170323.nc' to path '/storage/inputdata/atm/cam/chem/trop_mam/aero/mam4_0.9x1.2_L72_2000clim_c170323.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file bnd_topo = '/storage/inputdata/atm/cam/topo/USGS-gtopo30_ne4np4pg2_16x_converted.c20200527.nc'
+Trying to download file: 'atm/cam/topo/USGS-gtopo30_ne4np4pg2_16x_converted.c20200527.nc' to path '/storage/inputdata/atm/cam/topo/USGS-gtopo30_ne4np4pg2_16x_converted.c20200527.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file ncdata = '/storage/inputdata/atm/cam/inic/homme/eam_i_mam3_Linoz_ne4np4_L60_c20210917.nc'
+Trying to download file: 'atm/cam/inic/homme/eam_i_mam3_Linoz_ne4np4_L60_c20210917.nc' to path '/storage/inputdata/atm/cam/inic/homme/eam_i_mam3_Linoz_ne4np4_L60_c20210917.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file rrtmgp_coefficients_file_lw = '/storage/inputdata/atm/cam/rad/rrtmgp-data-lw-g128-210809.nc'
+Trying to download file: 'atm/cam/rad/rrtmgp-data-lw-g128-210809.nc' to path '/storage/inputdata/atm/cam/rad/rrtmgp-data-lw-g128-210809.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file rrtmgp_coefficients_file_sw = '/storage/inputdata/atm/cam/rad/rrtmgp-data-sw-g112-210809.nc'
+Trying to download file: 'atm/cam/rad/rrtmgp-data-sw-g112-210809.nc' to path '/storage/inputdata/atm/cam/rad/rrtmgp-data-sw-g112-210809.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file gw_drag_file = '/storage/inputdata/atm/waccm/gw/newmfspectra40_dc25.nc'
+Trying to download file: 'atm/waccm/gw/newmfspectra40_dc25.nc' to path '/storage/inputdata/atm/waccm/gw/newmfspectra40_dc25.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file prescribed_volcaero_file = '/storage/inputdata/atm/cam/volc/CMIP_DOE-ACME_radiation_average_1850-2014_v3_c20171204.nc'
+Trying to download file: 'atm/cam/volc/CMIP_DOE-ACME_radiation_average_1850-2014_v3_c20171204.nc' to path '/storage/inputdata/atm/cam/volc/CMIP_DOE-ACME_radiation_average_1850-2014_v3_c20171204.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file prescribed_ozone_file = '/storage/inputdata/atm/cam/ozone/ozone_1.9x2.5_L26_2000clim_c091112.nc'
+Trying to download file: 'atm/cam/ozone/ozone_1.9x2.5_L26_2000clim_c091112.nc' to path '/storage/inputdata/atm/cam/ozone/ozone_1.9x2.5_L26_2000clim_c091112.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file mode_defs for so4_a1 = '/storage/inputdata/atm/cam/physprops/sulfate_rrtmg_c080918.nc'
+Trying to download file: 'atm/cam/physprops/sulfate_rrtmg_c080918.nc' to path '/storage/inputdata/atm/cam/physprops/sulfate_rrtmg_c080918.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file mode_defs for pom_a1 = '/storage/inputdata/atm/cam/physprops/ocpho_rrtmg_c101112.nc'
+Trying to download file: 'atm/cam/physprops/ocpho_rrtmg_c101112.nc' to path '/storage/inputdata/atm/cam/physprops/ocpho_rrtmg_c101112.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file mode_defs for soa_a1 = '/storage/inputdata/atm/cam/physprops/ocphi_rrtmg_c100508.nc'
+Trying to download file: 'atm/cam/physprops/ocphi_rrtmg_c100508.nc' to path '/storage/inputdata/atm/cam/physprops/ocphi_rrtmg_c100508.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file mode_defs for bc_a1 = '/storage/inputdata/atm/cam/physprops/bcpho_rrtmg_c100508.nc'
+Trying to download file: 'atm/cam/physprops/bcpho_rrtmg_c100508.nc' to path '/storage/inputdata/atm/cam/physprops/bcpho_rrtmg_c100508.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file mode_defs for dst_a1 = '/storage/inputdata/atm/cam/physprops/dust_aeronet_rrtmg_c141106.nc'
+Trying to download file: 'atm/cam/physprops/dust_aeronet_rrtmg_c141106.nc' to path '/storage/inputdata/atm/cam/physprops/dust_aeronet_rrtmg_c141106.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file mode_defs for ncl_a1 = '/storage/inputdata/atm/cam/physprops/ssam_rrtmg_c100508.nc'
+Trying to download file: 'atm/cam/physprops/ssam_rrtmg_c100508.nc' to path '/storage/inputdata/atm/cam/physprops/ssam_rrtmg_c100508.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file rad_climate for mam3_mode1 = '/storage/inputdata/atm/cam/physprops/mam3_mode1_rrtmg_c110318.nc'
+Trying to download file: 'atm/cam/physprops/mam3_mode1_rrtmg_c110318.nc' to path '/storage/inputdata/atm/cam/physprops/mam3_mode1_rrtmg_c110318.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file rad_climate for mam3_mode2 = '/storage/inputdata/atm/cam/physprops/mam3_mode2_rrtmg_c110318.nc'
+Trying to download file: 'atm/cam/physprops/mam3_mode2_rrtmg_c110318.nc' to path '/storage/inputdata/atm/cam/physprops/mam3_mode2_rrtmg_c110318.nc' using WGET protocol.
+SUCCESS
+
+Model eam missing file rad_climate for mam3_mode3 = '/storage/inputdata/atm/cam/physprops/mam3_mode3_rrtmg_c110318.nc'
+Trying to download file: 'atm/cam/physprops/mam3_mode3_rrtmg_c110318.nc' to path '/storage/inputdata/atm/cam/physprops/mam3_mode3_rrtmg_c110318.nc' using WGET protocol.
+SUCCESS
+
+Loading input file list: 'Buildconf/cpl.input_data_list'
+Loading input file list: 'Buildconf/cice.input_data_list'
+Model cice missing file stream_domfilename = '/storage/inputdata/ocn/docn7/domain.ocn.1x1.111007.nc'
+Trying to download file: 'ocn/docn7/domain.ocn.1x1.111007.nc' to path '/storage/inputdata/ocn/docn7/domain.ocn.1x1.111007.nc' using WGET protocol.
+SUCCESS
+
+Model cice missing file stream_fldfilename = '/storage/inputdata/ocn/docn7/SSTDATA/sst_ice_CMIP6_DECK_E3SM_1x1_2010_clim_c20190821.nc'
+Trying to download file: 'ocn/docn7/SSTDATA/sst_ice_CMIP6_DECK_E3SM_1x1_2010_clim_c20190821.nc' to path '/storage/inputdata/ocn/docn7/SSTDATA/sst_ice_CMIP6_DECK_E3SM_1x1_2010_clim_c20190821.nc' using WGET protocol.
+SUCCESS
+
+Model cice missing file kmt_file = '/storage/inputdata/share/domains/domain.ocn.ne4pg2_oQU240.190321.nc'
+Trying to download file: 'share/domains/domain.ocn.ne4pg2_oQU240.190321.nc' to path '/storage/inputdata/share/domains/domain.ocn.ne4pg2_oQU240.190321.nc' using WGET protocol.
+SUCCESS
+
+Model cice missing file fsnowoptics = '/storage/inputdata/lnd/clm2/snicardata/snicar_optics_5bnd_mam_c160322.nc'
+Trying to download file: 'lnd/clm2/snicardata/snicar_optics_5bnd_mam_c160322.nc' to path '/storage/inputdata/lnd/clm2/snicardata/snicar_optics_5bnd_mam_c160322.nc' using WGET protocol.
+SUCCESS
+
+Loading input file list: 'Buildconf/docn.input_data_list'
+Loading input file list: 'Buildconf/elm.input_data_list'
+Model elm missing file stream_fldfilename_lai = '/storage/inputdata/lnd/clm2/lai_streams/MODISPFTLAI_0.5x0.5_c140711.nc'
+Trying to download file: 'lnd/clm2/lai_streams/MODISPFTLAI_0.5x0.5_c140711.nc' to path '/storage/inputdata/lnd/clm2/lai_streams/MODISPFTLAI_0.5x0.5_c140711.nc' using WGET protocol.
+SUCCESS
+
+Model elm missing file fatmlndfrc = '/storage/inputdata/share/domains/domain.lnd.ne4pg2_oQU240.190321.nc'
+Trying to download file: 'share/domains/domain.lnd.ne4pg2_oQU240.190321.nc' to path '/storage/inputdata/share/domains/domain.lnd.ne4pg2_oQU240.190321.nc' using WGET protocol.
+SUCCESS
+
+Model elm missing file fsnowaging = '/storage/inputdata/lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc'
+Trying to download file: 'lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc' to path '/storage/inputdata/lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc' using WGET protocol.
+SUCCESS
+
+Model elm missing file fsurdat = '/storage/inputdata/lnd/clm2/surfdata_map/surfdata_ne4pg2_simyr2000_c190620_with_TOP.nc'
+Trying to download file: 'lnd/clm2/surfdata_map/surfdata_ne4pg2_simyr2000_c190620_with_TOP.nc' to path '/storage/inputdata/lnd/clm2/surfdata_map/surfdata_ne4pg2_simyr2000_c190620_with_TOP.nc' using WGET protocol.
+SUCCESS
+
+Model elm missing file fsoilordercon = '/storage/inputdata/lnd/clm2/paramdata/CNP_parameters_c131108.nc'
+Trying to download file: 'lnd/clm2/paramdata/CNP_parameters_c131108.nc' to path '/storage/inputdata/lnd/clm2/paramdata/CNP_parameters_c131108.nc' using WGET protocol.
+SUCCESS
+
+Model elm no file specified for finidat
+Model elm missing file paramfile = '/storage/inputdata/lnd/clm2/paramdata/clm_params_c180301.nc'
+Trying to download file: 'lnd/clm2/paramdata/clm_params_c180301.nc' to path '/storage/inputdata/lnd/clm2/paramdata/clm_params_c180301.nc' using WGET protocol.
+SUCCESS
+
+ERROR: Build complete is not True please rebuild the model by calling case.build
+
+  case : example_job_submit_mmf
+
+
+[32m/climsim/E3SM//cime/scripts/create_newcase -case example_job_submit_mmf --script-root /scratch//example_job_submit_mmf -compset F2010-MMF1 -res ne4pg2_ne4pg2   -mach docker-climsim -compiler gnu    -pecount 64x1 [0m
+
+[32m./xmlchange EXEROOT=/scratch//example_job_submit_mmf/build[0m
+
+[32m./xmlchange RUNDIR=/scratch//example_job_submit_mmf/run[0m
+
+[32m./xmlchange DOUT_S_ROOT=/scratch//example_job_submit_mmf/archive[0m
+
+[32m./xmlchange DOUT_S=FALSE[0m
+
+[32m./xmlchange REST_OPTION=ndays[0m
+
+[32m./xmlchange REST_N=30[0m
+
+[32m./xmlchange MAX_MPITASKS_PER_NODE=64 [0m
+
+[32m./xmlchange MAX_TASKS_PER_NODE=64 [0m
+
+[32m./xmlchange ATM_NCPL=72[0m
+
+[32m./xmlchange --append --id CAM_CONFIG_OPTS --val " -cppdefs '    '  "[0m
+
+[32m./xmlchange PIO_NETCDF_FORMAT="64bit_data" [0m
+
+[32m./case.setup --reset[0m
+
+[32m./case.build[0m
+
+[32m./xmlchange JOB_QUEUE=regular[0m
+
+[32m./xmlchange STOP_OPTION=nmonths,STOP_N=3,RESUBMIT=0[0m
+
+[32m./xmlchange JOB_WALLCLOCK_TIME=24:00:00[0m
+
+[32m./xmlchange CHARGE_ACCOUNT=m4331,PROJECT=m4331[0m
+
+[32m./xmlchange --file env_run.xml CONTINUE_RUN=False [0m
+
+[32m./case.submit[0m
+
+  case : example_job_submit_mmf
+

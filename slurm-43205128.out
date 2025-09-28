@@ -1,0 +1,5 @@
+FAILED to create volume "to": /var/udiMount//storage/local_scratch, cannot create mount points in that location
+FAILED to setup user-requested mounts.
+FAILED to setup image.
+srun: error: nid008305: task 0: Exited with exit code 1
+srun: Terminating StepId=43205128.0

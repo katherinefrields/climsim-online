@@ -1,0 +1,12 @@
+/bin/bash: line 1: /climsim-online/E3SM//cime/scripts/create_newcase: No such file or directory
+
+  case : example_job_submit_mmf
+
+
+[32m/climsim-online/E3SM//cime/scripts/create_newcase -case example_job_submit_mmf --script-root /pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf -compset F2010-MMF1 -res ne4pg2_ne4pg2   -mach docker-climsim -compiler gnu    -pecount 64x1 [0m
+Traceback (most recent call last):
+  File "/global/homes/k/kfrields/climsim-online/E3SM/climsim_scripts/example_job_submit_mmf.py", line 105, in <module>
+    os.chdir(f'{case_scripts_dir}')
+FileNotFoundError: [Errno 2] No such file or directory: '/pscratch/sd/k/kfrields/climsim-online-data/scratch//example_job_submit_mmf'
+srun: error: nid001565: task 0: Exited with exit code 1
+srun: Terminating StepId=43209111.0
