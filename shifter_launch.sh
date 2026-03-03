@@ -2,7 +2,7 @@
 #SBATCH -N 1
 #SBATCH -C gpu
 #SBATCH -q debug
-#SBATCH -t 00:3:00
+#SBATCH -t 00:03:00
 #SBATCH -J climsim
 #SBATCH -A m4334
 #SBATCH --mail-user=frieldskatherine@gmail.com
