@@ -16,7 +16,6 @@ SHARED=/global/homes/k/kfrields/shared_e3sm
 srun -n 1 shifter --image=docker:katherinefrields/e3sm-climsim:latest \
     --volume=/pscratch/sd/k/kfrields/climsim-online-data/inputdata:/storage/inputdata \
     --volume=/pscratch/sd/k/kfrields/climsim-online-data/scratch:/scratch \
-    --volume=/pscratch/sd/k/kfrields/climsim-online-data:/climsim \
     python /global/homes/k/kfrields/climsim-online/E3SM/climsim_scripts/example_job_submit_mmf.py
 
 #python /global/homes/k/kfrields/climsim-online/E3SM/climsim_scripts/diff_mmf.py
