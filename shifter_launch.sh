@@ -10,7 +10,7 @@
 #SBATCH --gpus-per-node=1
 
 # Paths on NERSC (make sure these dirs exist in your $HOME or $SCRATCH
-SHARED=/pscratch/sd/k/kfrields/climsim-online-data/shared_e3sm
+SHARED=/global/homes/k/kfrields/shared_e3sm
 
 
 srun -n 1 shifter --image=docker:katherinefrields/e3sm-climsim:latest \
